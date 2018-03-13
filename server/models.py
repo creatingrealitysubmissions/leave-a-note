@@ -14,6 +14,7 @@ class Note(db.Model):
     # We could use PostGIS for this, but I think it's overkill when we just need to find points.
     lat = db.Column(DOUBLE_PRECISION, nullable=False)
     long = db.Column(DOUBLE_PRECISION, nullable=False)
+    altitude = db.Column(db.Float)
     expires = db.Column(db.DateTime, index=True)
 db.Index('note_lat_long_index', Note.lat, Note.long)
 
