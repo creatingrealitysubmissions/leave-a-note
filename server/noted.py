@@ -1,6 +1,8 @@
 from flask import Flask
+from models import init_app as init_models
 
 app = Flask(__name__)
+init_models(app)
 
 
 @app.route('/')
