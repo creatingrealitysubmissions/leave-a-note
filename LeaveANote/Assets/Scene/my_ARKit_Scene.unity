@@ -586,7 +586,7 @@ GameObject:
   - component: {fileID: 121845727}
   - component: {fileID: 121845726}
   m_Layer: 5
-  m_Name: WriteNote
+  m_Name: WriteNoteField
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3162,7 +3162,7 @@ MonoBehaviour:
   Notes: {fileID: 1650803758928128, guid: f813138785f574e8c9d1b31ef0c4f90a, type: 2}
   disFromCam: 1
   noteCount: 0
-  m_IF: {fileID: 0}
+  m_IF: {fileID: 121845726}
 --- !u!1 &1776313497
 GameObject:
   m_ObjectHideFlags: 0
