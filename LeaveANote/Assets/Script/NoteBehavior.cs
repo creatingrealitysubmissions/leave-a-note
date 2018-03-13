@@ -13,8 +13,8 @@ public class NoteBehavior : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
-		
+	void FixedUpdate(){
+		this.transform.Rotate (new Vector3 (0, 30, 0) * Time.deltaTime);
 	}
 
 	public void beTouched(){
