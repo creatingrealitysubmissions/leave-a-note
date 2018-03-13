@@ -8,9 +8,13 @@ public class TounchManager : MonoBehaviour {
 	bool isTouched = false;
 	public bool isEditing;
 	// Update is called once per frame
+	void Start(){
+		isEditing = false;
+	}
+
 	void Update()
 	{
-		if (Input.GetTouch(0).phase == TouchPhase.Began)
+		if ((Input.GetTouch(0).phase == TouchPhase.Began) && !isEditing)
 		{
 			isTouched = !isTouched;
 			notification2.SetActive (isTouched);
