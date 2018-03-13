@@ -8,6 +8,7 @@ public class ShowSText : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		//this.gameObject.SetActive (false);
+		m_TM = GameObject.Find("TouchManager");
 	}
 	
 	// Update is called once per frame
@@ -17,10 +18,12 @@ public class ShowSText : MonoBehaviour {
 
 	public void show(){
 		this.gameObject.SetActive (true);
+		m_TM.GetComponent<TounchManager> ().nowEdit ();
 	}
 
 	public void unShow(){
 		this.gameObject.SetActive (false);
+		m_TM.GetComponent<TounchManager> ().notEdit ();
 	}
 
 }
