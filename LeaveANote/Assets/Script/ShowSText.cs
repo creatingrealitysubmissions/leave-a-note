@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ShowSText : MonoBehaviour {
 
-
+	public GameObject m_TM;
 	// Use this for initialization
 	void Start () {
 		this.gameObject.SetActive (false);

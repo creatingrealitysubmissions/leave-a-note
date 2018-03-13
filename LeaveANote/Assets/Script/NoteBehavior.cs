@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class NoteBehavior : MonoBehaviour {
 	public GameObject Notification;
-	public string m_String;
+	public string m_String = "Nothing";
 
 	// Use this for initialization
 	void Start () {
