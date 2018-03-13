@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class NoteBehavior : MonoBehaviour {
 	public GameObject Notification;
+	public string m_String;
 
 	// Use this for initialization
 	void Start () {
@@ -19,6 +20,10 @@ public class NoteBehavior : MonoBehaviour {
 	public void beTouched(){
 		if (!Notification.activeSelf)
 			Notification.SetActive (true);
-		Notification.GetComponent<Text> ().text = this.gameObject.name;
+		Notification.GetComponent<Text> ().text = m_String;
+	}
+
+	public void setString(string stringToMe){
+		m_String = stringToMe;
 	}
 }

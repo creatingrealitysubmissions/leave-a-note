@@ -6,10 +6,15 @@ public class TounchManager : MonoBehaviour {
 
 	public GameObject notification2;
 	bool isTouched = false;
+	public bool isEditing;
 	// Update is called once per frame
+	void Start(){
+		isEditing = false;
+	}
+
 	void Update()
 	{
-		if (Input.GetTouch(0).phase == TouchPhase.Began)
+		if ((Input.GetTouch(0).phase == TouchPhase.Began) && !isEditing)
 		{
 			isTouched = !isTouched;
 			notification2.SetActive (isTouched);
@@ -24,5 +29,13 @@ public class TounchManager : MonoBehaviour {
 				}
 			}
 		}
+	}
+
+	public void nowEdit(){
+		isEditing = true;
+	}
+
+	public void notEdit(){
+		isEditing = false;
 	}
 }
