@@ -6,6 +6,7 @@ public class TounchManager : MonoBehaviour {
 
 	public GameObject notification2;
 	bool isTouched = false;
+	public bool isEditing;
 	// Update is called once per frame
 	void Update()
 	{
@@ -24,5 +25,13 @@ public class TounchManager : MonoBehaviour {
 				}
 			}
 		}
+	}
+
+	public void nowEdit(){
+		isEditing = true;
+	}
+
+	public void notEdit(){
+		isEditing = false;
 	}
 }
