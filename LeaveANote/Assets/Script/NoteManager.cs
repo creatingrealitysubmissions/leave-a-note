@@ -13,7 +13,7 @@ public class NoteManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		noteCount = 0;
-		m_IF = GameObject.Find ("WriteNoteField").GetComponent<InputField> ();
+		//m_IF = GameObject.Find ("Canvas/Note/WriteNoteField").GetComponent<InputField> ();
 
 	}
 	
