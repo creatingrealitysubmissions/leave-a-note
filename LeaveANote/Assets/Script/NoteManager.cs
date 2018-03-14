@@ -30,10 +30,11 @@ public class NoteManager : MonoBehaviour {
 		GameObject m_Notes = Instantiate (Notes, Camera.main.transform.position + Camera.main.transform.forward * disFromCam, Quaternion.identity);
 		m_Notes.name = m_Notes.name + noteCount.ToString ();
 		m_Notes.GetComponent<NoteBehavior> ().setString (m_IF.text);
+		m_IF.text = "";
 		noteCount++;
 	}
 
-	public void setUpNote(){
-		UINote.GetComponent<NoteController> ().showRead ();
+	public void setUpNote(string m_String){
+		UINote.GetComponent<NoteController> ().showRead (m_String);
 	}
 }

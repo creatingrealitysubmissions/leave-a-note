@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class NoteController : MonoBehaviour {
 
@@ -39,9 +40,10 @@ public class NoteController : MonoBehaviour {
 		m_Form.SetActive (true);
 	}
 
-	public void showRead(){
+	public void showRead(string m_String){
 		show ();
 		m_Form.SetActive (false);
 		m_Read.SetActive (true);
+		m_Read.transform.GetChild (0).GetComponent<Text> ().text = m_String;
 	}
 }
