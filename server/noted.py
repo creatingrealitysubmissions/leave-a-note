@@ -8,7 +8,7 @@ init_models(app)
 
 def note_to_json(note: Note):
     return {'id': note.id, 'kind': note.kind, 'content': note.content, 'lat': note.lat,
-            'long': note.long, 'altitude': note.altitude, 'expires': note.expires}
+            'lon': note.long, 'altitude': note.altitude, 'expires': note.expires}
 
 
 @app.route('/notes', methods=['GET'])
