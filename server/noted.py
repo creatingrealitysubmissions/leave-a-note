@@ -8,7 +8,8 @@ init_models(app)
 
 def note_to_json(note: Note):
     return {'id': note.id, 'kind': note.kind, 'content': note.content, 'lat': note.lat,
-            'lon': note.long, 'altitude': note.altitude, 'expires': note.expires}
+            'lon': note.long, 'altitude': note.altitude, 'expires': note.expires,
+            'color': note.colour}
 
 
 @app.route('/notes', methods=['GET'])
@@ -30,9 +31,10 @@ def add_note():
     kind = 'text'
     content = request.form['content']
     duration = int(request.form['duration'])
+    colour = request.form.get('color', 'ffffff')
     expiration = datetime.now() + timedelta(seconds=duration)
 
-    note = Note(kind=kind, content=content, lat=lat, long=lon, altitude=altitude, expires=expiration)
+    note = Note(kind=kind, content=content, lat=lat, long=lon, altitude=altitude, expires=expiration, colour=colour)
     db.session.add(note)
     db.session.commit()
     return jsonify(note=note_to_json(note))
