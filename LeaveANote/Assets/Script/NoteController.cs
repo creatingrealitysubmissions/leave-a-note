@@ -69,4 +69,8 @@ public class NoteController : MonoBehaviour {
 	public int returnPick(){
 		return spritePicker;
 	}
+
+	public Texture returnTexture(){
+		return m_Textures [spritePicker];
+	}
 }

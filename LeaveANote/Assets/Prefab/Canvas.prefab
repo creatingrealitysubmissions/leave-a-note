@@ -476,9 +476,21 @@ MonoBehaviour:
   noteButton: {fileID: 0}
   spritePicker: 0
   m_Sprites:
-  - {fileID: 21300000, guid: a776e59ed536f49c0b9ec8ed83a49896, type: 3}
-  - {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
-  m_Colors: []
+  - {fileID: 21300000, guid: bc3f9c8ca71cd411493738977965482f, type: 3}
+  - {fileID: 21300000, guid: 0f6d85ba25d2b41ba86c2e627aa2b39c, type: 3}
+  - {fileID: 21300000, guid: 7f6569c056b154c4f965f58067e026b1, type: 3}
+  - {fileID: 21300000, guid: 96bfe5625147a4a8299f6690353a8d2a, type: 3}
+  - {fileID: 21300000, guid: cc2896dc06fae495d8d7ec2f4396efe0, type: 3}
+  - {fileID: 21300000, guid: c86b62b75ffaa48a3ae530a4b90dec3c, type: 3}
+  - {fileID: 21300000, guid: 6c62d4c1fecb847358aa20a60a3f4f0d, type: 3}
+  m_Textures:
+  - {fileID: 2800000, guid: 8fc991fad6fab4401ae51e1949520eee, type: 3}
+  - {fileID: 2800000, guid: ec11c40c2244844beb254ace3d5c79ee, type: 3}
+  - {fileID: 2800000, guid: d7344feb061684e5eb2cb0d9163bf9e9, type: 3}
+  - {fileID: 2800000, guid: c8a7c045fa89d4f939319fb3125aad6b, type: 3}
+  - {fileID: 2800000, guid: e0dba859751214703bf82d50cca3ae13, type: 3}
+  - {fileID: 2800000, guid: 854d60ddd5075484487f2b355638399d, type: 3}
+  - {fileID: 2800000, guid: b9697708250fc41d6bd5383f93e55741, type: 3}
 --- !u!114 &114084908160951928
 MonoBehaviour:
   m_ObjectHideFlags: 1
