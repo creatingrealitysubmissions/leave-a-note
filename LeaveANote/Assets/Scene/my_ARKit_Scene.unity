@@ -548,21 +548,12 @@ Prefab:
       propertyPath: m_Name
       value: UI
       objectReference: {fileID: 0}
-    - target: {fileID: 114598176408228772, guid: ed5132c0e71b2438bb3931bba66a9652,
+    - target: {fileID: 224357465788278624, guid: ed5132c0e71b2438bb3931bba66a9652,
         type: 2}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: b0c3a385937d5463c8ce4e4408ff697a,
-        type: 3}
-    - target: {fileID: 114954953791484372, guid: ed5132c0e71b2438bb3931bba66a9652,
-        type: 2}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: a776e59ed536f49c0b9ec8ed83a49896,
-        type: 3}
-    m_RemovedComponents:
-    - {fileID: 114347443868334866, guid: ed5132c0e71b2438bb3931bba66a9652, type: 2}
-    - {fileID: 114949125761819148, guid: ed5132c0e71b2438bb3931bba66a9652, type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 600
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ed5132c0e71b2438bb3931bba66a9652, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &448505147 stripped
@@ -726,7 +717,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &769922069 stripped
 GameObject:
-  m_PrefabParentObject: {fileID: 1971119704005654, guid: ed5132c0e71b2438bb3931bba66a9652,
+  m_PrefabParentObject: {fileID: 1552492895714896, guid: ed5132c0e71b2438bb3931bba66a9652,
     type: 2}
   m_PrefabInternal: {fileID: 390463493}
 --- !u!1 &922811256
@@ -1328,6 +1319,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1837186387}
+  - component: {fileID: 1837186388}
   m_Layer: 0
   m_Name: GeoGenerator
   m_TagString: Untagged
@@ -1348,6 +1340,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1837186388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1837186386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3338c7517fd2486d9d05734fd7294bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LocationSign: {fileID: 0}
+  m_Lat: 0
+  m_Lon: 0
 --- !u!1 &2101518924
 GameObject:
   m_ObjectHideFlags: 0
