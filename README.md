@@ -1,13 +1,13 @@
 # leave-a-note
 It's a Hackathon project for the Creating Realtity Hackthon 2018 at USC!
 
-##Inspiration
+## Inspiration
 
-##User Story
+## User Story
 
-##Challenges
+## Challenges
 
 Unity, Apple, iOS, iphone hardware breakpoint support, noisy inputs, gps coordinates, arkit
 
-##Accomplishments
+## Accomplishments
 
