@@ -92,7 +92,6 @@ public class NoteManager : MonoBehaviour {
 		double phi2 = lat * DEG_TO_RAD;
 		Vector3 delta = new Vector3((float)(phi2 - phi1), 0, (float)((lambda2 - lambda1) * System.Math.Cos(phi1 + phi2) / 2.0));
 		delta *= 6371008f; // radius of earth
-		delta.z = -delta.z; // flip the Z coordinate to match what Apple does. This feels very sketchy?
 		return delta + unityOrigin;
 	}
 }
