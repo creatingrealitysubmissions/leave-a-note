@@ -1,7 +1,11 @@
 # Noted
-## by team leave-a-note
+### by *team leave-a-note*
+
+
 
 ## Inspiration
+
+Public communication among people is ruled by social media, making us more isolated in our daily lives. Noted is an app experience using Augmented Reality and GPS location that allows you to leave a note of anything on your mind in a public space, outside, for universal access to everyone. By combining the digital and physical world, we hope to build a new city of thoughts and ideas every time we step out the door!
 
 ## User Story
 
@@ -22,7 +26,7 @@ In practice there are many factors which introduce error at many levels of devic
 
 ## Conclusion?
 
-Virtual notes are saved to a remote globally accessible database which allows users to retrieve them anywhere.  Notes are equally accessible to everyone and are universally identifiable by their simple iconic.  Each note holds some information and left in a public space it is there to communicate value to another human.  While notes may not always be exactly where they were left due to the technical issues explained above but the data held with in each note remains and communicates value of the messenger wherever it appear in the world.  
+Virtual notes are saved to a globally accessible database which allows users to retrieve them anywhere.  Notes are equally accessible to everyone and are universally identifiable by their simple recognizable design.  Each note holds some information and left in a public space it is there to communicate value to another mind.  While notes may not always appear exactly where they were left due to the technical issues explained above but the data held with in each note remains and communicates what the messenger left behind wherever it appear in the world.  
 
 ## Accomplishments
 
