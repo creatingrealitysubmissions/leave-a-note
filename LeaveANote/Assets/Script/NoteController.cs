@@ -47,12 +47,13 @@ public class NoteController : MonoBehaviour {
 		show ();
 		m_Read.SetActive (false);
 		m_Form.SetActive (true);
+		spritePicker = 0;
+		changeNoteColor (spritePicker);
 	}
 
 	public void showRead(string m_String, int ColorPick = 0){
 		show ();
 		changeNoteColor (ColorPick);
-		spritePicker = ColorPick;
 		m_Form.SetActive (false);
 		m_Read.SetActive (true);
 		m_Read.transform.GetChild (0).GetComponent<Text> ().text = m_String;
@@ -74,7 +75,7 @@ public class NoteController : MonoBehaviour {
 
 	public void resetpick(){
 		spritePicker = 0;
-		changeNoteColor (0);
+		//changeNoteColor (spritePicker);
 	}
 
 	public Texture returnTexture(){

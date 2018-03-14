@@ -43,7 +43,7 @@ public class NoteManager : MonoBehaviour {
 		// TODO: This shouldn't work if we don't have a good location...
 		store.AddNote(Input.location.lastData, m_IF.text);
 		m_IF.text = "";
-		UINote.GetComponent<NoteController> ().resetpick ();
+		//UINote.GetComponent<NoteController> ().resetpick ();
 	}
 
 	public void setUpNote(string m_String, int mColor){
