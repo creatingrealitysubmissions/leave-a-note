@@ -12,7 +12,7 @@ public class NoteController : MonoBehaviour {
 	public GameObject noteButton;
 	public int spritePicker;
 	public Sprite[] m_Sprites;
-	public Color[] m_Colors;
+	public Texture[] m_Textures;
 
 	// Use this for initialization
 	void Start () {
@@ -23,6 +23,7 @@ public class NoteController : MonoBehaviour {
 		noteButton = GameObject.Find ("UI/NoteButton");
 		m_Image = GetComponent<Image> ();
 		spritePicker = 0;
+		changeNoteColor (spritePicker);
 	}
 		
 
@@ -46,8 +47,10 @@ public class NoteController : MonoBehaviour {
 		m_Form.SetActive (true);
 	}
 
-	public void showRead(string m_String){
+	public void showRead(string m_String, int ColorPick = 0){
 		show ();
+		changeNoteColor (ColorPick);
+		spritePicker = ColorPick;
 		m_Form.SetActive (false);
 		m_Read.SetActive (true);
 		m_Read.transform.GetChild (0).GetComponent<Text> ().text = m_String;
@@ -61,5 +64,9 @@ public class NoteController : MonoBehaviour {
 		spritePicker++;
 		spritePicker = spritePicker >= m_Sprites.Length ? 0 : spritePicker;
 		changeNoteColor (spritePicker);
+	}
+
+	public int returnPick(){
+		return spritePicker;
 	}
 }
