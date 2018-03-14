@@ -24,6 +24,8 @@ public class NoteController : MonoBehaviour {
 		m_Image = GetComponent<Image> ();
 		spritePicker = 0;
 		changeNoteColor (spritePicker);
+		m_Form.SetActive (true);
+		m_Read.SetActive (false);
 	}
 		
 
