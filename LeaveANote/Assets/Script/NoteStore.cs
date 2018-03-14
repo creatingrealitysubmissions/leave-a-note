@@ -20,11 +20,13 @@ public struct Note {
 }
 
 public delegate void NearbyNotesUpdatedDelegate(Note[] notes, LocationInfo location);
+public delegate void FinishedPostingNoteDelegate(Note note);
 
 public class NoteStore : MonoBehaviour {
 	public const double REQUEST_RESOLUTION_DEG = 200;
-	public const float MAXIMUM_INACCURACY = 20;
+	public const float MAXIMUM_INACCURACY = 80;
 	public NearbyNotesUpdatedDelegate onNotesUpdated;
+	public FinishedPostingNoteDelegate onNotePosted;
 
 	private bool hasLocation = false;
 	private LocationInfo lastUpdate;
@@ -32,17 +34,11 @@ public class NoteStore : MonoBehaviour {
 	public void Start() {
 		Input.location.Start();
 	}
-
-	[System.Serializable]
-	private struct NoteResult {
-		public Note[] notes;
-	}
 	
 	// Update is called once per frame
 	void Update () {
 		if (Input.location.status == LocationServiceStatus.Running) {
 			LocationInfo location = Input.location.lastData;
-			print("Location alive! Current accuracy: " + location.horizontalAccuracy);
 			if (location.horizontalAccuracy > MAXIMUM_INACCURACY) {
 				return;
 			}
@@ -55,6 +51,15 @@ public class NoteStore : MonoBehaviour {
 				StartCoroutine(RequestAtPos(location));
 			}
 		}
+	}
+
+	public void AddNote(LocationInfo location, string content) {
+		StartCoroutine(RequestAddNote(location, content));
+	}
+
+	[Serializable]
+	private struct NoteResult {
+		public Note[] notes;
 	}
 
 	private IEnumerator RequestAtPos(LocationInfo location) {
@@ -72,6 +77,36 @@ public class NoteStore : MonoBehaviour {
 				NoteResult result = JsonUtility.FromJson<NoteResult>(www.downloadHandler.text);
 				print("Got " + result.notes.Length + " items.");
 				onNotesUpdated.Invoke(result.notes, location);
+			}
+		}
+	}
+
+	[Serializable]
+	private struct SubmitResult {
+		public Note note;
+	}
+
+	private IEnumerator RequestAddNote(LocationInfo location, string content) {
+		print("Submitting note at " + location.longitude + ", " + location.latitude);
+		WWWForm form = new WWWForm();
+		form.AddField("long", location.longitude.ToString());
+		form.AddField("lat", location.latitude.ToString());
+		form.AddField("altitude", location.altitude.ToString());
+		form.AddField("content", content);
+		form.AddField("duration", (86400 * 5).ToString()); // 5 days for now (UI later?)
+
+		using (UnityWebRequest www = UnityWebRequest.Post("https://leave-a-note.herokuapp.com/notes", form)) {
+			www.chunkedTransfer = false; // chunked transfers appear to break gunicorn.
+			print("sending...");
+			yield return www.SendWebRequest();
+			print("sent!");
+			if (www.isNetworkError || www.isHttpError) {
+				// TODO: Error handling.
+				print("Failed to actually submit the note.");
+			} else {
+				print("Submitted note!");
+				SubmitResult result = JsonUtility.FromJson<SubmitResult>(www.downloadHandler.text);
+				onNotePosted.Invoke(result.note);
 			}
 		}
 	}

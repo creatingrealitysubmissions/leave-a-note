@@ -30,6 +30,7 @@ public class NoteManager : MonoBehaviour {
 
 		store = GameObject.Find("NoteStore").GetComponent<NoteStore>();
 		store.onNotesUpdated += notesUpdated;
+		store.onNotePosted += noteAdded;
 	}
 
 	// Update is called once per frame
@@ -39,6 +40,8 @@ public class NoteManager : MonoBehaviour {
 
 	public void CreateNotes(){
 		CreateNote(Camera.main.transform.position + Camera.main.transform.forward.normalized * disFromCam, m_IF.text);
+		// TODO: This shouldn't work if we don't have a good location...
+		store.AddNote(Input.location.lastData, m_IF.text);
 		m_IF.text = "";
 	}
 
@@ -66,6 +69,11 @@ public class NoteManager : MonoBehaviour {
 			displayedNotes.Add(note.id);
 			CreateNote(latLongToUnity(note.lat, note.lon), note.content);
 		}
+	}
+
+	// This makes sure we don't end up trying to re-display a note we just added.
+	private void noteAdded(Note note) {
+		displayedNotes.Add(note.id);
 	}
 
 	private Vector3 latLongToUnity(double lat, double lon) {
