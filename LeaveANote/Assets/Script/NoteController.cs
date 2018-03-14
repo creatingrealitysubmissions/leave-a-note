@@ -72,6 +72,11 @@ public class NoteController : MonoBehaviour {
 		return spritePicker;
 	}
 
+	public void resetpick(){
+		spritePicker = 0;
+		changeNoteColor (0);
+	}
+
 	public Texture returnTexture(){
 		return m_Textures [spritePicker];
 	}

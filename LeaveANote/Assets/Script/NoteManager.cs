@@ -43,17 +43,20 @@ public class NoteManager : MonoBehaviour {
 		// TODO: This shouldn't work if we don't have a good location...
 		store.AddNote(Input.location.lastData, m_IF.text);
 		m_IF.text = "";
+		UINote.GetComponent<NoteController> ().resetpick ();
 	}
 
-	public void setUpNote(string m_String){
+	public void setUpNote(string m_String, int mColor){
 		UINote.GetComponent<NoteController> ().showRead (m_String);
+		UINote.GetComponent<NoteController> ().changeNoteColor (mColor);
 	}
 
 	private void CreateNote(Vector3 position, string text) {
 		GameObject m_Notes = Instantiate(Notes, position, Quaternion.identity);
 		//m_Notes.GetComponent<Renderer> ().material.mainTexture = 
 		Texture tempTex = UINote.GetComponent<NoteController> ().returnTexture ();
-		m_Notes.GetComponent<NoteBehavior> ().NoteObjColor (tempTex);
+		int tempPic = UINote.GetComponent<NoteController> ().returnPick ();
+		m_Notes.GetComponent<NoteBehavior> ().NoteObjColor (tempTex, tempPic);
 		m_Notes.name = m_Notes.name + noteCount.ToString();
 		m_Notes.GetComponent<NoteBehavior>().setString(text);
 		noteCount++;
