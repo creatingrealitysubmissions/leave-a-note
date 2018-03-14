@@ -17,14 +17,16 @@ public struct Note {
 	public float altitude;
 	public int id;
 	public string content;
+	public int color;
 }
 
 public delegate void NearbyNotesUpdatedDelegate(Note[] notes, LocationInfo location);
 public delegate void FinishedPostingNoteDelegate(Note note);
 
 public class NoteStore : MonoBehaviour {
-	public const double REQUEST_RESOLUTION_DEG = 200;
-	public const float MAXIMUM_INACCURACY = 80;
+	public const double REQUEST_RESOLUTION_DEG = 0.0001;
+	public const float MAXIMUM_INACCURACY = 40;
+	public const string API_ROOT = "https://leave-a-note.herokuapp.com";
 	public NearbyNotesUpdatedDelegate onNotesUpdated;
 	public FinishedPostingNoteDelegate onNotePosted;
 
@@ -53,8 +55,8 @@ public class NoteStore : MonoBehaviour {
 		}
 	}
 
-	public void AddNote(LocationInfo location, string content) {
-		StartCoroutine(RequestAddNote(location, content));
+	public void AddNote(LocationInfo location, string content, int colour) {
+		StartCoroutine(RequestAddNote(location, content, colour));
 	}
 
 	[Serializable]
@@ -66,7 +68,8 @@ public class NoteStore : MonoBehaviour {
 		lastUpdate = location;
 		hasLocation = true;
 		print("Making web request at " + location.ToString());
-		using (UnityWebRequest www = UnityWebRequest.Get("https://leave-a-note.herokuapp.com/notes?lat=" + location.latitude + "&long=" + location.longitude + "&resolution=" + REQUEST_RESOLUTION_DEG)) {
+		using (UnityWebRequest www = UnityWebRequest.Get(API_ROOT + "/notes?lat=" + location.latitude + "&long=" 
+														+ location.longitude + "&resolution=" + REQUEST_RESOLUTION_DEG)) {
 			yield return www.SendWebRequest();
 			if (www.isNetworkError || www.isHttpError) {
 				print("Failed to make request.");
@@ -86,7 +89,7 @@ public class NoteStore : MonoBehaviour {
 		public Note note;
 	}
 
-	private IEnumerator RequestAddNote(LocationInfo location, string content) {
+	private IEnumerator RequestAddNote(LocationInfo location, string content, int colour) {
 		print("Submitting note at " + location.longitude + ", " + location.latitude);
 		WWWForm form = new WWWForm();
 		form.AddField("long", location.longitude.ToString());
@@ -94,8 +97,9 @@ public class NoteStore : MonoBehaviour {
 		form.AddField("altitude", location.altitude.ToString());
 		form.AddField("content", content);
 		form.AddField("duration", (86400 * 5).ToString()); // 5 days for now (UI later?)
+		form.AddField("color", colour.ToString());
 
-		using (UnityWebRequest www = UnityWebRequest.Post("https://leave-a-note.herokuapp.com/notes", form)) {
+		using (UnityWebRequest www = UnityWebRequest.Post(API_ROOT + "/notes", form)) {
 			www.chunkedTransfer = false; // chunked transfers appear to break gunicorn.
 			print("sending...");
 			yield return www.SendWebRequest();
