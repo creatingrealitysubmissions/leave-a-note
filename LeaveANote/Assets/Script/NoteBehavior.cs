@@ -8,6 +8,7 @@ public class NoteBehavior : MonoBehaviour {
 	public string m_String = "Nothing";
 	//public GameObject NoteField;
 	public GameObject m_NM;
+	public int m_Color = 0;
 
 	// Use this for initialization
 	void Start () {
@@ -26,10 +27,17 @@ public class NoteBehavior : MonoBehaviour {
 			Notification.SetActive (true);
 		Notification.GetComponent<Text> ().text = m_String;
 		//NoteField.GetComponent<Text> ().text = m_String;
-		m_NM.GetComponent<NoteManager> ().setUpNote (m_String);
+		//Debug.Log("WHY");
+		m_NM.GetComponent<NoteManager> ().setUpNote (m_String, m_Color);
 	}
 
 	public void setString(string stringToMe){
 		m_String = stringToMe;
+	}
+
+	public void NoteObjColor(Texture newText, int tarColor){
+		this.GetComponent<Renderer> ().material.mainTexture = newText;
+		this.transform.GetChild (0).GetComponent<Renderer> ().material.mainTexture = newText;
+		m_Color = tarColor;
 	}
 }

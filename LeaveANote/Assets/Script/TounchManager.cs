@@ -28,6 +28,7 @@ public class TounchManager : MonoBehaviour {
 				}
 			}
 		}
+			
 	}
 
 	public void nowEdit(){
