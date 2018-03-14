@@ -51,7 +51,9 @@ public class NoteManager : MonoBehaviour {
 
 	private void CreateNote(Vector3 position, string text) {
 		GameObject m_Notes = Instantiate(Notes, position, Quaternion.identity);
-		m_Notes.GetComponent<Renderer> ().material.mainTexture = UINote.GetComponent<NoteController> ().returnTexture ();
+		//m_Notes.GetComponent<Renderer> ().material.mainTexture = 
+		Texture tempTex = UINote.GetComponent<NoteController> ().returnTexture ();
+		m_Notes.GetComponent<NoteBehavior> ().NoteObjColor (tempTex);
 		m_Notes.name = m_Notes.name + noteCount.ToString();
 		m_Notes.GetComponent<NoteBehavior>().setString(text);
 		noteCount++;

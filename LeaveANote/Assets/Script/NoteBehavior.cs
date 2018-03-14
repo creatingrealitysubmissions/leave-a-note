@@ -32,4 +32,9 @@ public class NoteBehavior : MonoBehaviour {
 	public void setString(string stringToMe){
 		m_String = stringToMe;
 	}
+
+	public void NoteObjColor(Texture newText){
+		this.GetComponent<Renderer> ().material.mainTexture = newText;
+		this.transform.GetChild (0).GetComponent<Renderer> ().material.mainTexture = newText;
+	}
 }
