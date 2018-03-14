@@ -20,10 +20,10 @@ public class NoteManager : MonoBehaviour {
 		m_IF.transform.parent.parent.gameObject.GetComponent<NoteController> ().unShow ();
 
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
-		
+
 	}
 
 	public void CreateNotes(){
