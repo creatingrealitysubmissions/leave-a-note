@@ -1,7 +1,11 @@
 # Noted
-## by team leave-a-note
+### by *team leave-a-note*
+
+
 
 ## Inspiration
+
+Public communication among people is ruled by social media, making us more isolated in our daily lives. Noted is an app experience using Augmented Reality and GPS location that allows you to leave a note of anything on your mind in a public space, outside, for universal access to everyone. By combining the digital and physical world, we hope to build a new city of thoughts and ideas every time we step out the door!
 
 ## User Story
 
