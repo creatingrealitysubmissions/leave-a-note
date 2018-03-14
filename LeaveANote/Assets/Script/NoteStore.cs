@@ -19,7 +19,7 @@ public struct Note {
 	public string content;
 }
 
-public delegate void NearbyNotesUpdatedDelegate(Note[] notes);
+public delegate void NearbyNotesUpdatedDelegate(Note[] notes, LocationInfo location);
 
 public class NoteStore : MonoBehaviour {
 	public const double REQUEST_RESOLUTION_DEG = 200;
@@ -71,7 +71,7 @@ public class NoteStore : MonoBehaviour {
 				print(www.downloadHandler.text);
 				NoteResult result = JsonUtility.FromJson<NoteResult>(www.downloadHandler.text);
 				print("Got " + result.notes.Length + " items.");
-				onNotesUpdated.Invoke(result.notes);
+				onNotesUpdated.Invoke(result.notes, location);
 			}
 		}
 	}
