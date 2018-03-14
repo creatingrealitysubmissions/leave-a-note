@@ -553,6 +553,10 @@ Prefab:
       propertyPath: m_SizeDelta.x
       value: 600
       objectReference: {fileID: 0}
+    - target: {fileID: 1372281290751898, guid: ed5132c0e71b2438bb3931bba66a9652, type: 2}
+      propertyPath: m_Name
+      value: NoteButton
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ed5132c0e71b2438bb3931bba66a9652, type: 2}
   m_IsPrefabParent: 0
