@@ -382,7 +382,7 @@ PlayerSettings:
   enableInternalProfiler: 0
   logObjCUncaughtExceptions: 1
   enableCrashReportAPI: 0
-  cameraUsageDescription: camera use
+  cameraUsageDescription: We need to use it for AR
   locationUsageDescription: 
   microphoneUsageDescription: 
   switchNetLibKey: 
