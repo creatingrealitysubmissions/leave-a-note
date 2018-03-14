@@ -1019,10 +1019,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_camera: {fileID: 10}
-  startAlignment: 0
+  startAlignment: 1
   planeDetection: 1
-  getPointCloud: 1
-  enableLightEstimation: 1
+  getPointCloud: 0
+  enableLightEstimation: 0
 --- !u!4 &1121666033
 Transform:
   m_ObjectHideFlags: 0
