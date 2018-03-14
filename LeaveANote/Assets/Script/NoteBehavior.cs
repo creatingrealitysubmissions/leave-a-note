@@ -6,10 +6,12 @@ using UnityEngine.UI;
 public class NoteBehavior : MonoBehaviour {
 	public GameObject Notification;
 	public string m_String = "Nothing";
+	public GameObject NoteField;
 
 	// Use this for initialization
 	void Start () {
 		Notification = GameObject.Find ("Notificaiton");
+		NoteField = GameObject.Find ("Canvas/NoteToShow/testNote");
 	}
 	
 	// Update is called once per frame
@@ -21,6 +23,7 @@ public class NoteBehavior : MonoBehaviour {
 		if (!Notification.activeSelf)
 			Notification.SetActive (true);
 		Notification.GetComponent<Text> ().text = m_String;
+		NoteField.GetComponent<Text> ().text = m_String;
 	}
 
 	public void setString(string stringToMe){
