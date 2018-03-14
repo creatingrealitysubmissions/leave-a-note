@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class NoteBehavior : MonoBehaviour {
 	public GameObject Notification;
-	public string m_String;
+	public string m_String = "Nothing";
 
 	// Use this for initialization
 	void Start () {
@@ -13,8 +13,8 @@ public class NoteBehavior : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
-		
+	void FixedUpdate(){
+		this.transform.Rotate (new Vector3 (0, 30, 0) * Time.deltaTime);
 	}
 
 	public void beTouched(){
