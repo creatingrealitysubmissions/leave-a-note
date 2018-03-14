@@ -432,13 +432,13 @@ MonoBehaviour:
   - {fileID: 21300000, guid: c86b62b75ffaa48a3ae530a4b90dec3c, type: 3}
   - {fileID: 21300000, guid: 6c62d4c1fecb847358aa20a60a3f4f0d, type: 3}
   m_Textures:
-  - {fileID: 2800000, guid: 8fc991fad6fab4401ae51e1949520eee, type: 3}
-  - {fileID: 2800000, guid: ec11c40c2244844beb254ace3d5c79ee, type: 3}
-  - {fileID: 2800000, guid: d7344feb061684e5eb2cb0d9163bf9e9, type: 3}
-  - {fileID: 2800000, guid: c8a7c045fa89d4f939319fb3125aad6b, type: 3}
-  - {fileID: 2800000, guid: e0dba859751214703bf82d50cca3ae13, type: 3}
-  - {fileID: 2800000, guid: 854d60ddd5075484487f2b355638399d, type: 3}
-  - {fileID: 2800000, guid: b9697708250fc41d6bd5383f93e55741, type: 3}
+  - {fileID: 2800000, guid: cffbf3d3f061049a2a24ee61ea232d5c, type: 3}
+  - {fileID: 2800000, guid: f5fd20effcd9548f8a4e80bd2adeb5f9, type: 3}
+  - {fileID: 2800000, guid: 0e9f144a037d745468120881fc6a8488, type: 3}
+  - {fileID: 2800000, guid: a90715904726f436bb80d022ea294403, type: 3}
+  - {fileID: 2800000, guid: ed70b9d5434c6432099e72b667cb06af, type: 3}
+  - {fileID: 2800000, guid: 59eb8154c723242d989a61ab40ec21f5, type: 3}
+  - {fileID: 2800000, guid: c51b0fab1314841a5bbee2751a036237, type: 3}
 --- !u!114 &114090828523492272
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1320,20 +1320,20 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1745632558930962}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 0}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
