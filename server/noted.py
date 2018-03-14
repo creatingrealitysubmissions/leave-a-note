@@ -31,7 +31,7 @@ def add_note():
     kind = 'text'
     content = request.form['content']
     duration = int(request.form['duration'])
-    colour = request.form.get('color', 'ffffff')
+    colour = int(request.form.get('color', '0'))
     expiration = datetime.now() + timedelta(seconds=duration)
 
     note = Note(kind=kind, content=content, lat=lat, long=lon, altitude=altitude, expires=expiration, colour=colour)

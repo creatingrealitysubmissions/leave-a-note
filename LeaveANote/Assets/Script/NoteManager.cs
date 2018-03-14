@@ -39,9 +39,10 @@ public class NoteManager : MonoBehaviour {
 	}
 
 	public void CreateNotes(){
-		CreateNote(Camera.main.transform.position + Camera.main.transform.forward.normalized * disFromCam, m_IF.text);
+		int colour = UINote.GetComponent<NoteController>().returnPick();
+		CreateNote(Camera.main.transform.position + Camera.main.transform.forward.normalized * disFromCam, m_IF.text, colour);
 		// TODO: This shouldn't work if we don't have a good location...
-		store.AddNote(Input.location.lastData, m_IF.text);
+		store.AddNote(Input.location.lastData, m_IF.text, colour);
 		m_IF.Select ();
 		m_IF.text = "";
 		//UINote.GetComponent<NoteController> ().resetpick ();
@@ -54,12 +55,10 @@ public class NoteManager : MonoBehaviour {
 		//UINote.GetComponent<NoteController> ().changeNoteColor (mColor);
 	}
 
-	private void CreateNote(Vector3 position, string text) {
+	private void CreateNote(Vector3 position, string text, int colour) {
 		GameObject m_Notes = Instantiate(Notes, position, Quaternion.identity);
-		//m_Notes.GetComponent<Renderer> ().material.mainTexture = 
-		Texture tempTex = UINote.GetComponent<NoteController> ().returnTexture ();
-		int tempPic = UINote.GetComponent<NoteController> ().returnPick ();
-		m_Notes.GetComponent<NoteBehavior> ().NoteObjColor (tempTex, tempPic);
+		Texture tex = UINote.GetComponent<NoteController>().m_Textures[colour]; // HACK: this array is in the wrong place.
+		m_Notes.GetComponent<NoteBehavior> ().NoteObjColor (tex, colour);
 		m_Notes.name = m_Notes.name + noteCount.ToString();
 		m_Notes.GetComponent<NoteBehavior>().setString(text);
 		noteCount++;
@@ -76,7 +75,7 @@ public class NoteManager : MonoBehaviour {
 				continue;
 			}
 			displayedNotes.Add(note.id);
-			CreateNote(latLongToUnity(note.lat, note.lon), note.content);
+			CreateNote(latLongToUnity(note.lat, note.lon), note.content, note.color);
 		}
 	}
 

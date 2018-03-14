@@ -16,7 +16,7 @@ class Note(db.Model):
     long = db.Column(DOUBLE_PRECISION, nullable=False)
     altitude = db.Column(db.Float)
     expires = db.Column(db.DateTime, index=True)
-    colour = db.Column(db.String)
+    colour = db.Column(db.Integer)
 db.Index('note_lat_long_index', Note.lat, Note.long)
 
 
