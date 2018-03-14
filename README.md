@@ -1,5 +1,5 @@
-# leave-a-note
-It's a Hackathon project for the Creating Realtity Hackthon 2018 at USC!
+# Noted
+## by team leave-a-note
 
 ## Inspiration
 
