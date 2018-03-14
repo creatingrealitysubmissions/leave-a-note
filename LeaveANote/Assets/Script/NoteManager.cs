@@ -15,6 +15,7 @@ public class NoteManager : MonoBehaviour {
 	void Start () {
 		noteCount = 0;
 		m_IF = GameObject.Find ("UI/NotePage/Form/WriteNoteField").GetComponent<InputField> ();
+		//m_IF = GameObject.FindGameObjectWithTag ("inputField").GetComponent<InputField> ();
 		UINote = GameObject.Find("UI/NotePage");
 		m_IF.transform.parent.parent.gameObject.GetComponent<NoteController> ().unShow ();
 
