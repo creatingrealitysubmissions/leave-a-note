@@ -11,7 +11,7 @@ public class NoteBehavior : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		Notification = GameObject.Find ("Notificaiton");
-		NoteField = GameObject.Find ("Canvas/NoteToShow/testNote");
+		//NoteField = GameObject.Find ("UI/NoteToShow/testNote");
 	}
 	
 	// Update is called once per frame
