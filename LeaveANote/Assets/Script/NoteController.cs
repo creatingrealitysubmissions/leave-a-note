@@ -9,6 +9,7 @@ public class NoteController : MonoBehaviour {
 	public GameObject m_Form;
 	public GameObject m_Read;
 	public Image m_Image;
+	public GameObject noteButton;
 
 	// Use this for initialization
 	void Start () {
@@ -16,17 +17,15 @@ public class NoteController : MonoBehaviour {
 		m_TM = GameObject.Find("TouchManager");
 		m_Form = GameObject.Find ("UI/NotePage/Form");
 		m_Read = GameObject.Find ("UI/NotePage/Read");
+		noteButton = GameObject.Find ("UI/NoteButton");
 		m_Image = GetComponent<Image> ();
 	}
-
-	// Update is called once per frame
-	void Update () {
-
-	}
+		
 
 	public void show(){
 		this.gameObject.SetActive (true);
 		m_TM.GetComponent<TounchManager> ().nowEdit ();
+		noteButton.GetComponent<NoteButton> ().hideButton ();
 	}
 
 	public void unShow(){
@@ -34,6 +33,7 @@ public class NoteController : MonoBehaviour {
 		m_Form.SetActive (false);
 		m_Read.SetActive (false);
 		m_TM.GetComponent<TounchManager> ().notEdit ();
+		noteButton.GetComponent<NoteButton> ().showButton ();
 	}
 
 	public void showForm(){
@@ -50,5 +50,6 @@ public class NoteController : MonoBehaviour {
 	}
 
 	public void changeNoteColor(){
-		
+		//m_Image.sprite;
+	}
 }

@@ -192,8 +192,9 @@ GameObject:
   - component: {fileID: 222268227848648112}
   - component: {fileID: 114598176408228772}
   - component: {fileID: 114467195714653932}
+  - component: {fileID: 114909875565502770}
   m_Layer: 5
-  m_Name: WriteNote
+  m_Name: NoteButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -386,6 +387,8 @@ MonoBehaviour:
   m_TM: {fileID: 0}
   m_Form: {fileID: 0}
   m_Read: {fileID: 0}
+  m_Image: {fileID: 0}
+  noteButton: {fileID: 0}
 --- !u!114 &114084908160951928
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1254,6 +1257,18 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 
+--- !u!114 &114909875565502770
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1372281290751898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f8199ae656bf422bb84659642568fa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Image: {fileID: 0}
 --- !u!114 &114954953791484372
 MonoBehaviour:
   m_ObjectHideFlags: 1
