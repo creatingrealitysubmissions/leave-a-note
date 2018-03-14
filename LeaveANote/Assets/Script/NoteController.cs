@@ -13,8 +13,8 @@ public class NoteController : MonoBehaviour {
 	void Start () {
 		//this.gameObject.SetActive (false);
 		m_TM = GameObject.Find("TouchManager");
-		m_Form = GameObject.Find ("Form");
-		m_Read = GameObject.Find ("Read");
+		m_Form = GameObject.Find ("UI/NotePage/Form");
+		m_Read = GameObject.Find ("UI/NotePage/Read");
 	}
 
 	// Update is called once per frame
