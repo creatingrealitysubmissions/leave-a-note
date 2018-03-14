@@ -6,11 +6,13 @@ using UnityEngine.UI;
 public class NoteBehavior : MonoBehaviour {
 	public GameObject Notification;
 	public string m_String = "Nothing";
-	public GameObject NoteField;
+	//public GameObject NoteField;
+	public GameObject m_NM;
 
 	// Use this for initialization
 	void Start () {
 		Notification = GameObject.Find ("Notificaiton");
+		m_NM = GameObject.Find ("NoteParent");
 		//NoteField = GameObject.Find ("UI/NoteToShow/testNote");
 	}
 	
@@ -23,7 +25,8 @@ public class NoteBehavior : MonoBehaviour {
 		if (!Notification.activeSelf)
 			Notification.SetActive (true);
 		Notification.GetComponent<Text> ().text = m_String;
-		NoteField.GetComponent<Text> ().text = m_String;
+		//NoteField.GetComponent<Text> ().text = m_String;
+		m_NM.GetComponent<NoteManager> ().setUpNote ();
 	}
 
 	public void setString(string stringToMe){

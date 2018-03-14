@@ -10,11 +10,13 @@ public class NoteManager : MonoBehaviour {
 	public float disFromCam = 2.0f;
 	public int noteCount = 0;
 	public InputField m_IF;
+	public GameObject UINote;
 	// Use this for initialization
 	void Start () {
 		noteCount = 0;
-		m_IF = GameObject.Find ("UI/NotePage/WriteNoteField").GetComponent<InputField> ();
-		m_IF.transform.parent.gameObject.GetComponent<ShowSText> ().unShow ();
+		m_IF = GameObject.Find ("UI/NotePage/Form/WriteNoteField").GetComponent<InputField> ();
+		UINote = GameObject.Find("UI/NotePage");
+		m_IF.transform.parent.parent.gameObject.GetComponent<NoteController> ().unShow ();
 
 	}
 	
@@ -29,5 +31,9 @@ public class NoteManager : MonoBehaviour {
 		m_Notes.name = m_Notes.name + noteCount.ToString ();
 		m_Notes.GetComponent<NoteBehavior> ().setString (m_IF.text);
 		noteCount++;
+	}
+
+	public void setUpNote(){
+		UINote.GetComponent<NoteController> ().showRead ();
 	}
 }
