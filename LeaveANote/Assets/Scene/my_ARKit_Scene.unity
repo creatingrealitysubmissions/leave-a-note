@@ -560,7 +560,9 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: a776e59ed536f49c0b9ec8ed83a49896,
         type: 3}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114347443868334866, guid: ed5132c0e71b2438bb3931bba66a9652, type: 2}
+    - {fileID: 114949125761819148, guid: ed5132c0e71b2438bb3931bba66a9652, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: ed5132c0e71b2438bb3931bba66a9652, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &448505147 stripped
@@ -1317,6 +1319,34 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1837186386
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1837186387}
+  m_Layer: 0
+  m_Name: GeoGenerator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1837186387
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1837186386}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.5101857, y: -0.2234304, z: 0.007263243}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2101518924
 GameObject:
