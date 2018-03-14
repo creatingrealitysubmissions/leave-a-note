@@ -13,6 +13,7 @@ public class NoteController : MonoBehaviour {
 	public int spritePicker;
 	public Sprite[] m_Sprites;
 	public Texture[] m_Textures;
+	public InputField m_Input;
 
 	// Use this for initialization
 	void Start () {
@@ -24,6 +25,7 @@ public class NoteController : MonoBehaviour {
 		m_Image = GetComponent<Image> ();
 		spritePicker = 0;
 		changeNoteColor (spritePicker);
+		m_Input = GameObject.Find ("UI/NotePage/Form/WriteNoteField").GetComponent<InputField>();
 		m_Form.SetActive (true);
 		m_Read.SetActive (false);
 	}
@@ -49,6 +51,8 @@ public class NoteController : MonoBehaviour {
 		m_Form.SetActive (true);
 		spritePicker = 0;
 		changeNoteColor (spritePicker);
+		m_Input.Select ();
+		m_Input.text = "";
 	}
 
 	public void showRead(string m_String, int ColorPick = 0){

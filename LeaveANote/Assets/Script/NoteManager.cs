@@ -42,6 +42,7 @@ public class NoteManager : MonoBehaviour {
 		CreateNote(Camera.main.transform.position + Camera.main.transform.forward.normalized * disFromCam, m_IF.text);
 		// TODO: This shouldn't work if we don't have a good location...
 		store.AddNote(Input.location.lastData, m_IF.text);
+		m_IF.Select ();
 		m_IF.text = "";
 		//UINote.GetComponent<NoteController> ().resetpick ();
 	}
