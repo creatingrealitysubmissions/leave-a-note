@@ -48,8 +48,10 @@ public class NoteManager : MonoBehaviour {
 	}
 
 	public void setUpNote(string m_String, int mColor){
-		UINote.GetComponent<NoteController> ().showRead (m_String);
-		UINote.GetComponent<NoteController> ().changeNoteColor (mColor);
+		//Debug.Log ("setting UP");
+		//Debug.Log ("SetUPNOTE " + m_String);
+		UINote.GetComponent<NoteController> ().showRead (m_String, mColor);
+		//UINote.GetComponent<NoteController> ().changeNoteColor (mColor);
 	}
 
 	private void CreateNote(Vector3 position, string text) {

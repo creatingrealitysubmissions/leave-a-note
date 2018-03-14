@@ -27,6 +27,7 @@ public class NoteBehavior : MonoBehaviour {
 			Notification.SetActive (true);
 		Notification.GetComponent<Text> ().text = m_String;
 		//NoteField.GetComponent<Text> ().text = m_String;
+		//Debug.Log("WHY");
 		m_NM.GetComponent<NoteManager> ().setUpNote (m_String, m_Color);
 	}
 

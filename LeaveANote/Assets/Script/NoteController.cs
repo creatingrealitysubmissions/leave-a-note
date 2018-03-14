@@ -58,9 +58,11 @@ public class NoteController : MonoBehaviour {
 	public void showRead(string m_String, int ColorPick = 0){
 		show ();
 		changeNoteColor (ColorPick);
+		//Debug.Log ("showRead: " + m_String);
 		m_Form.SetActive (false);
 		m_Read.SetActive (true);
-		m_Read.transform.GetChild (0).GetComponent<Text> ().text = m_String;
+		m_Read.transform.GetChild (1).GetComponent<Text> ().text = m_String;
+		//Debug.Log ("It execute");
 	}
 
 	public void changeNoteColor(int pickSprite){

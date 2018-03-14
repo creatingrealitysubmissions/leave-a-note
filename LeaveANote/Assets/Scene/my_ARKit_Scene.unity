@@ -304,6 +304,11 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1 &167321772 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1166088176407720, guid: ed5132c0e71b2438bb3931bba66a9652,
+    type: 2}
+  m_PrefabInternal: {fileID: 609004971}
 --- !u!1 &229804520
 GameObject:
   m_ObjectHideFlags: 0
@@ -638,20 +643,6 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1637554938}
-    - target: {fileID: 114134951864390114, guid: ed5132c0e71b2438bb3931bba66a9652,
-        type: 2}
-      propertyPath: m_Color.a
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1266998247867030, guid: ed5132c0e71b2438bb3931bba66a9652, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224466888703797312, guid: ed5132c0e71b2438bb3931bba66a9652,
-        type: 2}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ed5132c0e71b2438bb3931bba66a9652, type: 2}
   m_IsPrefabParent: 0
@@ -875,6 +866,20 @@ Prefab:
       propertyPath: Notification
       value: 
       objectReference: {fileID: 448505147}
+    - target: {fileID: 1650803758928128, guid: f813138785f574e8c9d1b31ef0c4f90a, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114949402228468752, guid: f813138785f574e8c9d1b31ef0c4f90a,
+        type: 2}
+      propertyPath: m_String
+      value: po
+      objectReference: {fileID: 0}
+    - target: {fileID: 114949402228468752, guid: f813138785f574e8c9d1b31ef0c4f90a,
+        type: 2}
+      propertyPath: m_Color
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f813138785f574e8c9d1b31ef0c4f90a, type: 2}
   m_IsPrefabParent: 0
@@ -1141,6 +1146,16 @@ Prefab:
       propertyPath: Notification
       value: 
       objectReference: {fileID: 448505147}
+    - target: {fileID: 114021474036586746, guid: f7970fc0ef69a4badabfe74838993f22,
+        type: 2}
+      propertyPath: UINote
+      value: 
+      objectReference: {fileID: 167321772}
+    - target: {fileID: 114021474036586746, guid: f7970fc0ef69a4badabfe74838993f22,
+        type: 2}
+      propertyPath: m_IF
+      value: 
+      objectReference: {fileID: 1981259112}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f7970fc0ef69a4badabfe74838993f22, type: 2}
   m_IsPrefabParent: 0
@@ -1300,7 +1315,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1639892244}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3cac9d10c729466488656986ec570bf, type: 3}
+  m_Script: {fileID: 11500000, guid: acf02af2724fe4c1c94050b33b1750ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &1639892246
@@ -1360,6 +1375,12 @@ MonoBehaviour:
   FacingSign: {fileID: 0}
   m_Lat: 0
   m_Lon: 0
+--- !u!114 &1981259112 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114655839463017240, guid: ed5132c0e71b2438bb3931bba66a9652,
+    type: 2}
+  m_PrefabInternal: {fileID: 609004971}
+  m_Script: {fileID: 575553740, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 --- !u!1 &2101518924
 GameObject:
   m_ObjectHideFlags: 0
