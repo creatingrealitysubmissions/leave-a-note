@@ -8,6 +8,7 @@ public class NoteController : MonoBehaviour {
 	public GameObject m_TM;
 	public GameObject m_Form;
 	public GameObject m_Read;
+	public Image m_Image;
 
 	// Use this for initialization
 	void Start () {
@@ -15,6 +16,7 @@ public class NoteController : MonoBehaviour {
 		m_TM = GameObject.Find("TouchManager");
 		m_Form = GameObject.Find ("UI/NotePage/Form");
 		m_Read = GameObject.Find ("UI/NotePage/Read");
+		m_Image = GetComponent<Image> ();
 	}
 
 	// Update is called once per frame
@@ -46,4 +48,7 @@ public class NoteController : MonoBehaviour {
 		m_Read.SetActive (true);
 		m_Read.transform.GetChild (0).GetComponent<Text> ().text = m_String;
 	}
+
+	public void changeNoteColor(){
+		
 }

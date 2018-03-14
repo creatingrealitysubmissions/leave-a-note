@@ -548,10 +548,9 @@ Prefab:
       propertyPath: m_Name
       value: UI
       objectReference: {fileID: 0}
-    - target: {fileID: 224357465788278624, guid: ed5132c0e71b2438bb3931bba66a9652,
-        type: 2}
-      propertyPath: m_SizeDelta.x
-      value: 600
+    - target: {fileID: 1372281290751898, guid: ed5132c0e71b2438bb3931bba66a9652, type: 2}
+      propertyPath: m_Name
+      value: NoteButton
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ed5132c0e71b2438bb3931bba66a9652, type: 2}
@@ -1298,6 +1297,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3cac9d10c729466488656986ec570bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hasLocation: 0
 --- !u!4 &1639892246
 Transform:
   m_ObjectHideFlags: 0
