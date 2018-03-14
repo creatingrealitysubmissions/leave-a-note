@@ -552,6 +552,12 @@ Prefab:
       propertyPath: m_TagString
       value: InputField
       objectReference: {fileID: 0}
+    - target: {fileID: 114598176408228772, guid: ed5132c0e71b2438bb3931bba66a9652,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 528ee0f77dea54f789b85966dcfa7e3e,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ed5132c0e71b2438bb3931bba66a9652, type: 2}
   m_IsPrefabParent: 0
