@@ -439,7 +439,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 14
       objectReference: {fileID: 0}
-    - target: {fileID: 114003091387319338, guid: a6f935961bed64cf2863b0db60ed931d,
+    - target: {fileID: 0}
+      propertyPath: notification2
+      value: 
+      objectReference: {fileID: 769922069}
+    - target: {fileID: 114473028143559830, guid: a6f935961bed64cf2863b0db60ed931d,
         type: 2}
       propertyPath: notification2
       value: 
@@ -634,14 +638,39 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1515198856147506, guid: ed5132c0e71b2438bb3931bba66a9652, type: 2}
+      propertyPath: m_Name
+      value: UI
+      objectReference: {fileID: 0}
     - target: {fileID: 114267475374958600, guid: ed5132c0e71b2438bb3931bba66a9652,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1637554938}
-    - target: {fileID: 1515198856147506, guid: ed5132c0e71b2438bb3931bba66a9652, type: 2}
-      propertyPath: m_Name
-      value: UI
+    - target: {fileID: 224023541951515058, guid: ed5132c0e71b2438bb3931bba66a9652,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -67.000015
+      objectReference: {fileID: 0}
+    - target: {fileID: 224499560242152764, guid: ed5132c0e71b2438bb3931bba66a9652,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -79
+      objectReference: {fileID: 0}
+    - target: {fileID: 224357465788278624, guid: ed5132c0e71b2438bb3931bba66a9652,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -91.000015
+      objectReference: {fileID: 0}
+    - target: {fileID: 224349111341000666, guid: ed5132c0e71b2438bb3931bba66a9652,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -55.00002
+      objectReference: {fileID: 0}
+    - target: {fileID: 114391229987889148, guid: ed5132c0e71b2438bb3931bba66a9652,
+        type: 2}
+      propertyPath: m_RaycastTarget
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ed5132c0e71b2438bb3931bba66a9652, type: 2}

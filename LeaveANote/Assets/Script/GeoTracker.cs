@@ -18,7 +18,7 @@ public class GeoTracker : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate(){
 		LocationSign.GetComponent<Text> ().text = "Camera Location: " + Camera.main.transform.position.x + ", " + Camera.main.transform.position.y + ", " + Camera.main.transform.position.z;
-		FacingSign.GetComponent<Text> ().text = "Facing: " + Input.compass.magneticHeading;
+		FacingSign.GetComponent<Text> ().text = "GPS pos: " + Input.location.lastData.longitude + ", " + Input.location.lastData.latitude + " (accuracy: " + Input.location.lastData.horizontalAccuracy + ", timestamp: " + Input.location.lastData.timestamp + ")";
 	}
 
 	public void GeneratePoint(){

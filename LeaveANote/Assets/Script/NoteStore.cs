@@ -24,8 +24,8 @@ public delegate void NearbyNotesUpdatedDelegate(Note[] notes, LocationInfo locat
 public delegate void FinishedPostingNoteDelegate(Note note);
 
 public class NoteStore : MonoBehaviour {
-	public const double REQUEST_RESOLUTION_DEG = 0.0001;
-	public const float MAXIMUM_INACCURACY = 40;
+	public const double REQUEST_RESOLUTION_DEG = 0.001;
+	public const float MAXIMUM_INACCURACY = 60;
 	public const string API_ROOT = "https://leave-a-note.herokuapp.com";
 	public NearbyNotesUpdatedDelegate onNotesUpdated;
 	public FinishedPostingNoteDelegate onNotePosted;
@@ -34,7 +34,7 @@ public class NoteStore : MonoBehaviour {
 	private LocationInfo lastUpdate;
 
 	public void Start() {
-		Input.location.Start();
+		Input.location.Start(1, 1);
 	}
 	
 	// Update is called once per frame

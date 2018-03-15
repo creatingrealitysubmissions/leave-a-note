@@ -33,7 +33,7 @@ public class NoteController : MonoBehaviour {
 
 	public void show(){
 		this.gameObject.SetActive (true);
-		m_TM.GetComponent<TounchManager> ().nowEdit ();
+		m_TM.GetComponent<TouchManager> ().nowEdit ();
 		noteButton.GetComponent<NoteButton> ().hideButton ();
 	}
 
@@ -41,7 +41,7 @@ public class NoteController : MonoBehaviour {
 		this.gameObject.SetActive (false);
 		m_Form.SetActive (false);
 		m_Read.SetActive (false);
-		m_TM.GetComponent<TounchManager> ().notEdit ();
+		m_TM.GetComponent<TouchManager> ().notEdit ();
 		noteButton.GetComponent<NoteButton> ().showButton ();
 	}
 

@@ -87,12 +87,12 @@ public class NoteManager : MonoBehaviour {
 	private Vector3 latLongToUnity(double lat, double lon) {
 		// Lazy approach: use the spherical equirectangular projection, which is probably okayish over short distances.
 		// source: http://www.movable-type.co.uk/scripts/latlong.html
-		const double DEG_TO_RAD = 0.008726646259971648;
+		const double DEG_TO_RAD = 0.017453292519943295769236907684886f;
 		double lambda1 = latLongOrigin.longitude * DEG_TO_RAD;
 		double lambda2 = lon * DEG_TO_RAD;
 		double phi1 = latLongOrigin.latitude * DEG_TO_RAD;
 		double phi2 = lat * DEG_TO_RAD;
-		Vector3 delta = new Vector3((float)(phi2 - phi1), 0, (float)((lambda2 - lambda1) * System.Math.Cos(phi1 + phi2) / 2.0));
+		Vector3 delta = new Vector3((float)((lambda2 - lambda1) * System.Math.Cos(phi1 + phi2) / 2.0), 0, (float)(phi2 - phi1));
 		delta *= 6371008f; // radius of earth
 		return delta + unityOrigin;
 	}
