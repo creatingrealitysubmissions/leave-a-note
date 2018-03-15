@@ -211,7 +211,7 @@ GameObject:
   - component: {fileID: 222512681534766528}
   - component: {fileID: 114660072133936148}
   m_Layer: 5
-  m_Name: Notificaiton
+  m_Name: Notification
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -280,7 +280,7 @@ GameObject:
   - component: {fileID: 222635403772830300}
   - component: {fileID: 114362504367698174}
   m_Layer: 5
-  m_Name: Notificaiton (1)
+  m_Name: Notification (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

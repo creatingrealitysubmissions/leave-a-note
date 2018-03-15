@@ -12,7 +12,7 @@ public class NoteBehavior : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		Notification = GameObject.Find ("Notificaiton");
+		Notification = GameObject.Find ("Notification");
 		m_NM = GameObject.Find ("NoteParent");
 		//NoteField = GameObject.Find ("UI/NoteToShow/testNote");
 	}

@@ -439,7 +439,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 14
       objectReference: {fileID: 0}
-    - target: {fileID: 114003091387319338, guid: a6f935961bed64cf2863b0db60ed931d,
+    - target: {fileID: 0}
+      propertyPath: notification2
+      value: 
+      objectReference: {fileID: 769922069}
+    - target: {fileID: 114473028143559830, guid: a6f935961bed64cf2863b0db60ed931d,
         type: 2}
       propertyPath: notification2
       value: 
@@ -662,6 +666,11 @@ Prefab:
         type: 2}
       propertyPath: m_AnchoredPosition.y
       value: -55.00002
+      objectReference: {fileID: 0}
+    - target: {fileID: 114391229987889148, guid: ed5132c0e71b2438bb3931bba66a9652,
+        type: 2}
+      propertyPath: m_RaycastTarget
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ed5132c0e71b2438bb3931bba66a9652, type: 2}

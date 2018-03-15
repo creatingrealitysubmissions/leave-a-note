@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TounchManager : MonoBehaviour {
+public class TouchManager : MonoBehaviour {
 
 	public GameObject notification2;
 	bool isTouched = false;

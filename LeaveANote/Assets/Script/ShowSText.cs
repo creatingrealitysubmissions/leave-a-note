@@ -18,12 +18,12 @@ public class ShowSText : MonoBehaviour {
 
 	public void show(){
 		this.gameObject.SetActive (true);
-		m_TM.GetComponent<TounchManager> ().nowEdit ();
+		m_TM.GetComponent<TouchManager> ().nowEdit ();
 	}
 
 	public void unShow(){
 		this.gameObject.SetActive (false);
-		m_TM.GetComponent<TounchManager> ().notEdit ();
+		m_TM.GetComponent<TouchManager> ().notEdit ();
 	}
 
 }
